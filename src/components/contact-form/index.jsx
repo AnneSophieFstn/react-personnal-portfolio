@@ -43,7 +43,11 @@ const ContactForm = ({ className, url }) => {
             data,
         })
             .then((_res) => {
-                handleServerResponse(true, "Thanks! for being with us", form);
+                handleServerResponse(
+                    true,
+                    "Merci pour votre message ! Je reviendrai vers vous dans les plus brefs délais.",
+                    form
+                );
             })
             .catch((err) => {
                 handleServerResponse(false, err.response.data.error, form);
@@ -58,36 +62,19 @@ const ContactForm = ({ className, url }) => {
                     id="contact-form"
                     onSubmit={handleSubmit(onSubmit)}
                 >
-                    <div className="col-lg-6">
+                    <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="name">Nom</Label>
+                            <Label htmlFor="name">Nom / Prénom</Label>
                             <Input
                                 name="name"
                                 id="name"
                                 type="text"
                                 {...register("name", {
-                                    required: "Name is required",
+                                    required: "Votre nom et prénom est requis",
                                 })}
                             />
                             {errors.name && (
                                 <ErrorText>{errors.name?.message}</ErrorText>
-                            )}
-                        </FormGroup>
-                    </div>
-
-                    <div className="col-lg-6">
-                        <FormGroup>
-                            <Label htmlFor="phone">Numéro de téléphone</Label>
-                            <Input
-                                name="phone"
-                                id="phone"
-                                type="text"
-                                {...register("phone", {
-                                    required: "Phone is required",
-                                })}
-                            />
-                            {errors.phone && (
-                                <ErrorText>{errors.phone?.message}</ErrorText>
                             )}
                         </FormGroup>
                     </div>
@@ -100,10 +87,10 @@ const ContactForm = ({ className, url }) => {
                                 name="email"
                                 type="email"
                                 {...register("email", {
-                                    required: "Email is required",
+                                    required: "Votre email est requis",
                                     pattern: {
                                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                                        message: "invalid email address",
+                                        message: "adresse email invalide",
                                     },
                                 })}
                             />
@@ -121,7 +108,7 @@ const ContactForm = ({ className, url }) => {
                                 name="subject"
                                 type="text"
                                 {...register("subject", {
-                                    required: "Subject is required",
+                                    required: "L'objet est requis",
                                 })}
                             />
                             {errors.subject && (
@@ -137,7 +124,7 @@ const ContactForm = ({ className, url }) => {
                                 name="message"
                                 id="message"
                                 {...register("message", {
-                                    required: "Message is required",
+                                    required: "Un message est requis",
                                 })}
                             ></Textarea>
                             {errors.message && (
