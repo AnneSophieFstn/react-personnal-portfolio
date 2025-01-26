@@ -1,0 +1,14 @@
+{
+    "id": "header-data-1",
+    "section": "header-1",
+
+    "logo": [
+        {
+            "src": "../images/logo/logo-dark.png"
+        },
+        {
+            "src": "../images/logo/logo-white.png"
+        }
+    ],
+    "slogan": "Développeuse passionné, je crée des applications web et mobile sur mesure pour donner vie à vos projets numériques."
+}

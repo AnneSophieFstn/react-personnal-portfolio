@@ -1,0 +1,31 @@
+{
+    "id": "main-menu-1",
+    "section": "menu-1",
+    "menu": [
+        {
+            "id": 1,
+            "text": "Accueil",
+            "path": "home"
+        },
+        {
+            "id": 3,
+            "text": "Projets",
+            "path": "portfolio"
+        },
+        {
+            "id": 4,
+            "text": "Parcours",
+            "path": "resume"
+        },
+        {
+            "id": 5,
+            "text": "Recommandations",
+            "path": "testimonial"
+        },
+        {
+            "id": 8,
+            "text": "Contact",
+            "path": "contacts"
+        }
+    ]
+}

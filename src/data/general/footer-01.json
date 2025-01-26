@@ -1,0 +1,13 @@
+{
+    "id": "footer-data-1",
+    "section": "footer-1",
+    "copyright_text": " Tous droits réservés par <a href='https://www.annesophiefaustino.com/'>Anne-Sophie Faustino.</a>",
+    "logo": [
+        {
+            "src": "../images/logo/logo-asf.png"
+        },
+        {
+            "src": "../images/logo/logo-asf.png"
+        }
+    ]
+}
